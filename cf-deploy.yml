@@ -3,7 +3,7 @@
   tasks:
     - name: Create or Update Cloudformation stack
       cloudformation:
-        stack_name: "javahome-stack"
+        stack_name: "javahome-stack-jenkins"
         region: "us-east-1"
         template: "cf-deploy.yml"
         template_parameters:
