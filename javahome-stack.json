@@ -1,0 +1,38 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "This stack is to demo deploying stacks using jenkins and ansible",
+  "Metadata": {
+    
+  },
+  "Parameters": {
+    "vpcCidr": {
+      "Description": "Choose vpc cidr block",
+      "Type": "String",
+      "Default": "192.168.0.0/16"
+    },
+    "instanceTenancy": {
+      "Description": "Choose tenancy for VPC",
+      "Type": "String",
+      "Default": "default"
+    }
+  },
+  "Resources": {
+    "JavaHomeVPC": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": {
+          "Ref": "vpcCidr"
+        },
+        "InstanceTenancy": {
+          "Ref": "instanceTenancy"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "JavaHomeVpc"
+          }
+        ]
+      }
+    }
+  }
+}
