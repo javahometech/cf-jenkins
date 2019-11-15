@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Create CF Template'){
             steps{
-                sh "ansible-playbook cf-deploy.yml"
+                sh "ansible-playbook -vvv cf-deploy.yml"
             }
         }
     }
