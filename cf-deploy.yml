@@ -5,7 +5,7 @@
       cloudformation:
         stack_name: "javahome-stack-jenkins"
         region: "us-east-1"
-        template: "cf-deploy.yml"
+        template: "javahome-stack.json"
         template_parameters:
           vpcCidr: "172.17.0.0/16"
           instanceTenancy: "default"
