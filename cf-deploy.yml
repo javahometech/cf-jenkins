@@ -2,11 +2,11 @@
 - hosts: localhost
   tasks:
     - name: Create or Update Cloudformation stack
-      cloudformation:
-      stack_name: "javahome_stack"
-      region: "us-east-1"
-      template: "cf-deploy.yml"
-      template_parameters:
-        vpcCidr: "172.17.0.0/16"
-        instanceTenancy: "default"
-      state: "present"
+        cloudformation:
+        stack_name: "javahome_stack"
+        region: "us-east-1"
+        template: "cf-deploy.yml"
+        template_parameters:
+          vpcCidr: "172.17.0.0/16"
+          instanceTenancy: "default"
+        state: "present"
