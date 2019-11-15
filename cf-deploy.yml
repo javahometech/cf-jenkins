@@ -2,7 +2,7 @@
 - hosts: localhost
   tasks:
     - name: Create or Update Cloudformation stack
-        cloudformation:
+      cloudformation:
         stack_name: "javahome_stack"
         region: "us-east-1"
         template: "cf-deploy.yml"
